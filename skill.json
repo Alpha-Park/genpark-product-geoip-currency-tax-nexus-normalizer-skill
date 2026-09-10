@@ -1,0 +1,48 @@
+{
+  "name": "genpark-product-geoip-currency-tax-nexus-normalizer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Cross-border e-commerce Geo-IP currency converter and dynamic VAT/Sales Tax nexus compliance calculator for autonomous agent checkout.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "agentic-commerce",
+  "tags": [
+    "stripe-tax",
+    "currency-conversion",
+    "tax-nexus",
+    "cross-border-commerce",
+    "geoip-pricing"
+  ],
+  "inputs": {
+    "base_price_usd": {
+      "type": "number",
+      "default": 199.0
+    },
+    "destination_country": {
+      "type": "string",
+      "default": "GB"
+    },
+    "destination_postal": {
+      "type": "string",
+      "default": "SW1A 1AA"
+    }
+  },
+  "outputs": {
+    "normalization_id": {
+      "type": "string"
+    },
+    "local_currency": {
+      "type": "string"
+    },
+    "local_total_payable": {
+      "type": "number"
+    },
+    "nexus_compliance_status": {
+      "type": "string"
+    },
+    "tax_breakdown_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
